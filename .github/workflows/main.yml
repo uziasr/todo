@@ -27,6 +27,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+        # Add this step to update the bundle identifier in tauri.conf.json
+      - name: Update Bundle Identifier
+        run: |
+          sed -i 's/"bundle": { "identifier": "com.tauri.dev" }/"bundle": { "identifier": "my.todo.dev" }/' tauri.conf.json
+
       # for projects that use labels and PRs,
       # try https://github.com/mikepenz/release-changelog-builder-action instead
       # TODO: use API to collect commit messages
@@ -57,7 +62,6 @@ jobs:
 
       - name: Build the app
         uses: tauri-apps/tauri-action@v0
-
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
