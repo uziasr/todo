@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tauri": "python --version && tauri"
+    "tauri": "python --version && pwd && ls && tauri"
   },
   "eslintConfig": {
     "extends": [
