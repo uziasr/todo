@@ -1,4 +1,4 @@
-import os
+import sys
 import json
 
 new_title = sys.argv[-1]
