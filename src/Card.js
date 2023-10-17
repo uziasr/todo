@@ -17,6 +17,7 @@ const bull = (
 
 export default function BasicCard(props) {
     const { card } = props
+    console.log('test')
   return (
     <div style={{marginBottom: "20px"}}>
         <Card sx={{ width: "200px", height: "200px" }}>
