@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tauri": "python rename_identifier.py uzias.todo.dev && pwd && ls && tauri"
+    "tauri": "pwd && ls && ls src-tauri && python rename_identifier.py uzias.todo.dev && tauri"
   },
   "eslintConfig": {
     "extends": [
