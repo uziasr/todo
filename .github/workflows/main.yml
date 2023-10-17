@@ -29,11 +29,7 @@ jobs:
 
         # Add this step to update the bundle identifier in tauri.conf.json
       - name: Check contents
-        run: ls
-      - name: Update Bundle Identifier
-        run: |
-          sed -i 's/"bundle": { "identifier": "com.tauri.dev" }/"bundle": { "identifier": "my.todo.dev" }/' tauri.conf.json
-
+        run: ls && pwd
       # for projects that use labels and PRs,
       # try https://github.com/mikepenz/release-changelog-builder-action instead
       # TODO: use API to collect commit messages
